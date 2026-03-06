@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para alguien especial</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Arial;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+.container{
+background:rgba(255,255,255,0.08);
+padding:40px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 20px rgba(255,255,255,0.1);
+width:350px;
+}
+
+h1{
+font-weight:300;
+}
+
+button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#ff4b91;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+box-shadow:0 0 15px #ff4b91;
+}
+
+#mensaje{
+opacity:0;
+margin-top:20px;
+transition:1s;
+}
+
+.mostrar{
+opacity:1;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Para alguien especial 🌸</h1>
+
+<button onclick="abrir()">Abrir mensaje</button>
+
+<p id="mensaje">
+Feliz Día de la Mujer ✨<br><br>
+Que nunca pierdas esa sonrisa,<br>
+ni esa forma tan bonita de iluminar
+los lugares donde estás 💫
+</p>
+
+<audio id="musica">
+<source src="cancion.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+
+function abrir(){
+
+document.getElementById("mensaje").classList.add("mostrar");
+
+document.getElementById("musica").play();
+
+}
+
+</script>
+
+</body>
+</html>
